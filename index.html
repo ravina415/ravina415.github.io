@@ -6,6 +6,8 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+      <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="google-spreadsheet.js"></script>
 <script>	
 function SubForm (){
     $.ajax({
@@ -24,26 +26,55 @@ function SubForm (){
 </script>
 </head>
 <body>
-  <form id="myForm">
-    <label>Full Name</label>
-    <br/>
-    <input type ="text" name="Full_name" value =""/>
-    <br/>
-    <label>Date</label>
-    <br/>
-    <input type ="date" name="Date" value =""/>
-    <br/>
-    <label>Amount</label>
-    <br/>
-    <input type="number" name="Amount" value =""/>
-    <br/>
-    <label>Message</label>
-    <br/>
-    <textarea name="message" value ="">
-    </textarea>
-    <br/>
-    <br/>
-  </form>
-  <button onclick="SubForm()">Submit</button>
-</body>
+ <style>
+            div {
+                box-sizing: border-box;
+                width: 100%;
+                border: 100px solid black;
+                float: left;
+                align-content: center;
+                align-items: center;
+            }
+  
+            form {
+                margin: 0 auto;
+                width: 600px;
+            }
+        </style>
+    </head>
+  
+    <body>
+        <h1 style="text-align: center;">Detail Form</h1>
+       <form id="myForm">
+            <p>Project Name: <input type="text" 
+                            size="65" name="Project_name" /></p>
+            <br />
+            <p>Location: <input type="text" 
+                               size="65" name="Location" />
+          </p>
+            <br />
+            <p>Date: <input type="date" 
+                            size="65" name="Date" /></p>
+            <br />
+            <p>Advance: <input type="number" 
+                         size="65" name="Advance" /></p>
+			<p>Balance: <input type="number" 
+                         size="65" name="Balance" /></p>			 
+            <br />
+			
+            <p>Area: <textarea name="Area" value ="">
+    </textarea></p>
+            <br />
+			</form>
+  <button onclick="SubForm()">Submit</button></br>
+   <a href="https://docs.google.com/spreadsheets/d/18hPbtfBxCmJNymIp6UgeX6DVUcGa6dM7UoKMe-2ckiI/edit#gid=0" >Details</button>
+            
+        
+    </body>
 </html>
+
+
+
+
+
+ 
